@@ -1,4 +1,4 @@
-const V='step-eleve-v3',F=['./', 'index.html', 'eps-core.js', 'eleve-core.js', 'css/style.css', 'js/common.js', 'js/eleve.js', 'manifest.webmanifest', 'icons/icon-192-stepeps-eleve.png', 'icons/icon-512-stepeps-eleve.png', 'icons/icon-stepeps-eleve.png'];
+const V='step-eleve-v4',F=['./', 'index.html', 'eps-core.js', 'eleve-core.js', 'css/style.css', 'js/common.js', 'js/eleve.js', 'manifest.webmanifest', 'icons/icon-192-stepeps-eleve.png', 'icons/icon-512-stepeps-eleve.png', 'icons/icon-stepeps-eleve.png'];
 const T=2500; // si le réseau ne répond pas en 2,5 s (wifi sans Internet, borne coupée…), on sert tout de suite la copie hors ligne
 const net=r=>new Promise((ok,ko)=>{const t=setTimeout(()=>ko(new Error('timeout')),T);fetch(r,{cache:'no-cache'}).then(x=>{clearTimeout(t);ok(x)},e=>{clearTimeout(t);ko(e)})});
 // Installation : chaque fichier est chargé séparément ; un fichier manquant ne bloque plus l'installation (donc le mode hors ligne).
